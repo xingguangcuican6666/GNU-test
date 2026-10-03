@@ -4,6 +4,9 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   build-aarch64-gnu:
     runs-on: ubuntu-latest
