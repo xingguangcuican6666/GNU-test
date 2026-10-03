@@ -21,3 +21,10 @@ jobs:
 
       - name: Build hello world for AArch64 GNU
         run: make clean all
+
+      - name: Upload AArch64 GNU artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hello-aarch64
+          path: hello-aarch64
+          if-no-files-found: error
